@@ -105,6 +105,14 @@ export default new Vuex.Store({
         }
         newTasks.push(newTask)
         db.collection('tasks').add(newTask)
+        newTask = {
+          id: 3,
+          title: 'Macarrão',
+          done: false,
+          dueDate: null
+        }
+        newTasks.push(newTask)
+        db.collection('tasks').add(newTask)
         state.tasks = newTasks
         commit('showSnackbar', 'Lista recriada')
       })
